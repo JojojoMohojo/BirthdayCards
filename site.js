@@ -1,9 +1,19 @@
 document.getElementById("draw").addEventListener("click", function() {
+    var drawbutton = this;
     document.getElementById("Rules").classList.add("hidden");
-    var card = getRandomObjectFromArray(cardList);
+    var randomNumber = getRandomObjectFromArray(cardList);
+    var card = cardList[randomNumber];
     document.getElementById("CardTitle").textContent = card.title;
     document.getElementById("CardText").textContent = card.text;
+    document.getElementById("CardNumber").textContent = "#" + randomNumber;
     document.getElementById("Card").classList.remove("hidden");
+
+    // Disable the button for 10 seconds
+    drawbutton.disabled = true;
+    setTimeout(function(e) {
+        console.log("button is back online")
+        drawbutton.disabled = false;
+    }, 5000); // 5 seconds in milliseconds
 });
 
 document.getElementById("rules").addEventListener("click", function() {
@@ -11,18 +21,22 @@ document.getElementById("rules").addEventListener("click", function() {
     document.getElementById("Rules").classList.remove("hidden");
 });
 
+function getRandomObjectFromArray(array) {
+    return randomIndex = Math.floor(Math.random() * array.length);
+}
+
 var cardList = [
     {
         "title":"Baldy baldy baldy ",
-        "text":"male pattern baldness got you down, just shave it all off. Wear the bald cap"
+        "text":"Male pattern baldness got you down, just shave it all off. Wear the bald cap, if you remove the bald cap before someone else draws this card you must do a shot"
     },
     {
         "title":"Ellen's Quiz Time",
-        "text":"Ellen will ask a question about Matt get it wrong and you have to drink"
+        "text":"Duh duh duh, it's Ellen quiz time. She will ask a question about Matt, get it wrong but someone else then gets it correct, you must drink half your drink"
     },
     {
         "title":"Tattoo time",
-        "text":"You are jealous of Matt's sick ink, get one of Matt's tattoos done with a Sharpie"
+        "text":"You are jealous of Matt's sick ink, get one of Matt's tattoos done with a Sharpie, your choice which one and where"
     },
     {
         "title":"King of Burghfield",
@@ -33,24 +47,20 @@ var cardList = [
         "text":"Matt has an amazing tache, you should draw one on to be just like him. If you already have one you don't have to do anything ... except remove that beard. Forfitting this is worth 2 shots"
     },
     {
-        "title":"Music mysteo",
-        "text":"let the group record a new ring tone for you and leave your phone on loud for the rest of the night or down your drinks and another person's"
+        "title":"Dj Lil Honks",
+        "text":"Wicka wicka, let the group record a new ring tone for you and leave your phone on loud for the rest of the night or down your drinks and another person's"
     },
     {
         "title":"Where's my phone?",
-        "text":"ooopies you left your phone alone in a room with Matt, he can send one text to anyone on your phone (excluding work and parents). Or take a shot"
+        "text":"ooopies you left your phone alone in a room with Matt, he can send one text to anyone on your phone (excluding work and parents). If you refuse take a shot"
     },
     {
         "title":"Matt facts",
-        "text":"Matt's facts are usually fake, give him a cool new fact on the topic of his choice. If he likes your fact you can give out a drink, else you must drink."
-    },
-    {
-        "title":"Hey that's my joke",
-        "text":"(don't read this out loud) whenever Joe talks you must say whatever he says but just louder or take a shot."
+        "text":"Matt's facts have a tendency to be fake, give him a cool new fact on the topic of his choice. If he likes your fact you can give out a drink, else you must drink."
     },
     {
         "title":"Lil honkys training school",
-        "text":"everything you say for the next 10 mins must be spoken in rhymes, or a shot to remove this curse"
+        "text":"Everything you say for the next 10 mins must be spoken in rhymes, each time you fail take a sip, or a shot to remove this curse"
     },
     {
         "title":"Lil froggy boy",
@@ -62,44 +72,62 @@ var cardList = [
     },
     {
         "title":"Matt has Fridays off ",
-        "text":"so should you, but it's a Saturday, either way chill, this card is a freebie "
+        "text":"So should you, but it's a Saturday, either way chill, this card is a freebie"
     },
     {
         "title":"Al does the griddy",
-        "text":"if Al is here he must do the griddy, otherwise you have to and you have to take 3 sips as you have lost Al "
+        "text":"If Al is here he must do the griddy, otherwise you have to and you have to take 3 sips as you have lost Al "
     },
     {
         "title":"Chat mpt",
-        "text":"ask chat gpt to make a drinking game for us to play given our current situation and we must all play it. You are the games leader, it is up to you to get everyone to play"
+        "text":"Ask chat gpt to make a drinking game for us to play given our current situation and we must all play it. You are the games leader, let the games begin"
     },
     {
         "title":"You are gay",
-        "text":"f you read this card you are gay, order a fancy drink at the bar and let Matt have half cause he's half gay ( unless your monty and then you can have the whole pint) #birearser"
+        "text":"If you read this card you are gay, order a fancy drink at the bar and let Matt have half cause he's half gay (unless your monty and then you can have the whole pint) #BiEraser"
     },
     {
         "title":"Change places",
-        "text":"you get to swap everyone's drinks around. Choose who gets who's."
+        "text":"You get to swap everyone's drinks around, everyone must end up with a different drink. Choose who gets whose."
     },
     {
         "title":"Only child",
-        "text":"Matt's and only child and so now are you. You must go finish your drink on a table by yourself and you can't come back till it's finished "
+        "text":"Matt's and only child and so now are you. You must go finish your drink on a table by yourself and you can't come back till it's finished"
     },
     {
-        "title":"You've skipped leg day ",
+        "title":"You've skipped leg day",
         "text":"Matt always skips leg day but not today. Chose someone to carry to the next pub. They cannot have been picked before. 1 sip per time you stop. You're not allowed to move without carrying them"
     },
     {
         "title":"Naughty vapers",
-        "text":"won't you think of the planet, if you bought a vape out today you must finish your drink. Unless someone has asked for some of it, then they must finish your drink"
+        "text":"Won't you think of the planet, if you bought a vape out today you must finish your drink. Unless someone has asked for some of it, then they must finish your drink"
     },
     {
         "title":"Vest time",
-        "text":"Matt loves a vest so wear one for him (one will be supplied)"
+        "text":"Matt loves a vest so wear one for him (one will be supplied), this vest cannot be removed until someone else draws this"
+    },
+    {
+        "title":"Little wittle PissBoy",
+        "text":"Ewww you little piss boy, no going for a wee until you have finished your drink you little piss goblin"
+    },
+    {
+        "title":"Ben Ten Time",
+        "text":"It's a game of categories but the only category allowed is Ben10 aliens, you start"
+    },
+    {
+        "title":"Fallen soldiers",
+        "text":"It's sad to see so many fallen soldiers, you must take a drink for each person who has now gone home. Chris and Lewis count as they died before the battle even started"
+    },
+    {
+        "title":"Sneeze Sneeze Cough Cough",
+        "text":"Oh no you've just got a cat but you're allergic. What a stupid thing to do! Better get a glass of milk for that cat tho (and drink it, the cat doesn't deserve any milk)"
+    },
+    {
+        "title":"How many plants??",
+        "text":"Matt has lots of plants but you should get some too, order a salad and eat the whole thing!"
+    },
+    {
+        "title":"Brainy boy chess time",
+        "text":"Ask the barman for the 'Queen of drinks', you must drink whatever they get you"
     }
 ]
-
-
-function getRandomObjectFromArray(array) {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
-  }
