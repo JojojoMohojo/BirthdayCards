@@ -40,7 +40,7 @@ var cardList = [
     },
     {
         "title":"King of Burghfield",
-        "text":"You're the king of a small village, time to throw your weight around. Chose a drink, everyone has to order that as their next drink"
+        "text":"You're the king of a small village, time to throw your weight around. Choose a drink, everyone has to order that as their next drink"
     },
     {
         "title":"God tier Moustache",
@@ -84,7 +84,7 @@ var cardList = [
     },
     {
         "title":"You are gay",
-        "text":"If you read this card you are gay, order a fancy drink at the bar and let Matt have half cause he's half gay (unless your monty and then you can have the whole pint) #BiEraser"
+        "text":"If you read this card you are gay, order a fancy drink at the bar and let Matt have half cause he's half gay (unless you're monty and then you can have the whole pint) #BiErasure"
     },
     {
         "title":"Change places",
@@ -92,11 +92,11 @@ var cardList = [
     },
     {
         "title":"Only child",
-        "text":"Matt's and only child and so now are you. You must go finish your drink on a table by yourself and you can't come back till it's finished"
+        "text":"Matt's an only child and so now are you. You must go finish your drink on a table by yourself and you can't come back until it's finished"
     },
     {
         "title":"You've skipped leg day",
-        "text":"Matt always skips leg day but not today. Chose someone to carry to the next pub. They cannot have been picked before. 1 sip per time you stop. You're not allowed to move without carrying them"
+        "text":"Matt always skips leg day but not today. Choose someone to carry to the next pub. They cannot have been picked before. 1 sip per time you stop. You're not allowed to move without carrying them"
     },
     {
         "title":"Naughty vapers",
