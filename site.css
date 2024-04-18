@@ -19,6 +19,7 @@
     color:#d3d9f5;
     width:85%;
     margin: 20px auto;
+    position: relative;
 }
 
 #CardTitle {
@@ -50,16 +51,14 @@ button:active {
 }
 
 #draw:disabled {
-    background-color: #ccc; /* Change background color to light gray */
+    background-color: gray; /* Change background color to light gray */
     color: #999; /* Change text color to darker gray */
     cursor: not-allowed; /* Change cursor to not-allowed */
 }
 
 #CardNumber {
     position: absolute;
-    bottom: auto;
-    width: 80%;
-    display: flex;
-    justify-content: end;
-    margin-top:20px;
+    bottom: 0;
+    right:0;
+    padding: 10px;
 }
