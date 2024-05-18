@@ -1,2 +1,2 @@
 # BirthdayCards
-This is drinking dares for my brithday
+This is drinking dares for Tom's birthday pub crawl
