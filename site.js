@@ -1,5 +1,5 @@
 document.getElementById("draw").addEventListener("click", function() {
-    alert("Only Matt can draw cards");
+    alert("Only Joe can draw cards");
 });
 
 document.getElementById("rules").addEventListener("click", function() {
